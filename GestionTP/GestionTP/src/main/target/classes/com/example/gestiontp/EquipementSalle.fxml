@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="EquipementSalle" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestiontp.EquipementController">
+    <children>
+        <Hyperlink fx:id="minus" layoutX="350" layoutY="-35" onAction="#closewindow">
+            <graphic>
+                <SVGPath fx:id="minusicon" content="M432 256c0 19.7-14.3 32-32 32L48 288c-19.7 0-32-14.3-32-32s14.3-32 32-32l352 0c19.7 0 32 14.3 32 32z" layoutX="260.0" layoutY="-240.0" scaleX="0.03" scaleY="0.03" stroke="#012A4A" strokeWidth="25" />
+            </graphic>
+        </Hyperlink>
+
+        <Text fx:id="EquipementSalletitle" layoutX="150.0" layoutY="40.0" text="CARACTÉRISTIQUES DES PC" />
+        <Label fx:id="TitleC" layoutX="260.0" layoutY="50.0" text="SALLE" />
+        <Label fx:id="labelC" layoutX="334.0" layoutY="50.0" text="--" />
+
+        <Button id="bouttonajtsup" fx:id="addRowButton" layoutX="520.0" layoutY="95.0" maxHeight="19" maxWidth="19" minHeight="19" minWidth="19" onAction="#handleAddRow" style="-fx-background-color: derive(#012A4A,0%)" text="+" />
+        <Button id="bouttonajtsup" fx:id="deleteRowButton" layoutX="545.0" layoutY="95.0" maxHeight="19" maxWidth="19" minHeight="19" minWidth="19" onAction="#handleDeleteRow" style="-fx-background-color: derive(#012A4A,0%)" text="-" />
+
+
+
+        <TableView fx:id="EquipementTable" layoutX="25.0" layoutY="120.0" prefWidth="580.0" prefHeight="200.0">
+            <columns>
+                <TableColumn id="columntext" fx:id="codeColumn" prefWidth="100" text="CODE" />
+                <TableColumn id="columntext" fx:id="marqueColumn" prefWidth="75" text="MARQUE" />
+                <TableColumn id="columntext" fx:id="ramColumn" prefWidth="70" text="RAM(GB)" />
+                <TableColumn id="columntext" fx:id="seColumn" prefWidth="140" text="SE" />
+                <TableColumn id="columntext" fx:id="disqueColumn" prefWidth="81" text="DISQUE" />
+                <TableColumn id="columntext" fx:id="cpuColumn" prefWidth="110" text="CPU" />
+            </columns>
+        </TableView>
+
+
+    </children>
+</AnchorPane>

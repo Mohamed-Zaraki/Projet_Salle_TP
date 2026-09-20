@@ -1,0 +1,21 @@
+﻿# IDE & System
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Build outputs
+target/
+out/
+bin/
+
+# Executables, heavy binaries & bundled JDKs
+testest/
+jdk-*/
+javafx-*/
+*.exe
+*.jar
+*.dll
+*.so
+*.dylib
+*.log
